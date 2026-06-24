@@ -1,5 +1,5 @@
 {
-  "name": "geohashkit",
+  "name": "@billdaddy/geohashkit",
   "version": "0.1.0",
   "description": "Zero-dependency TypeScript geohash: encode/decode lat-lng, neighbors, bounding box, bboxes coverage, expand, distance, parent/children. Port of Python geohash2 / Go geohash.",
   "type": "module",
@@ -13,7 +13,9 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",
@@ -21,9 +23,18 @@
     "prepublishOnly": "npm run typecheck && npm test && npm run build"
   },
   "keywords": [
-    "geohash", "geo", "latitude", "longitude", "location",
-    "proximity", "spatial", "bounding-box", "neighbors",
-    "ngeohash", "typescript", "zero-dependency"
+    "geohash",
+    "geo",
+    "latitude",
+    "longitude",
+    "location",
+    "proximity",
+    "spatial",
+    "bounding-box",
+    "neighbors",
+    "ngeohash",
+    "typescript",
+    "zero-dependency"
   ],
   "author": "trananhtung",
   "license": "MIT",

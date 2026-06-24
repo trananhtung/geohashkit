@@ -4,14 +4,14 @@
 
 Zero-dependency TypeScript geohash encoding for location-based services: encode/decode lat-lng, neighbors, bounding box, proximity search, distance, parent/children. Drop-in replacement for `ngeohash` (256k/week) with full TypeScript types.
 
-[![npm](https://img.shields.io/npm/v/geohashkit)](https://www.npmjs.com/package/geohashkit)
-[![license](https://img.shields.io/npm/l/geohashkit)](LICENSE)
+[![npm](https://img.shields.io/npm/v/@billdaddy/geohashkit)](https://www.npmjs.com/package/@billdaddy/geohashkit)
+[![license](https://img.shields.io/npm/l/@billdaddy/geohashkit)](LICENSE)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](package.json)
 
 ## Install
 
 ```bash
-npm install geohashkit
+npm install @billdaddy/geohashkit
 ```
 
 ## Why?
@@ -23,7 +23,7 @@ npm install geohashkit
 ## Quick start
 
 ```typescript
-import { encode, decode, neighbors, expand } from "geohashkit";
+import { encode, decode, neighbors, expand } from "@billdaddy/geohashkit";
 
 // Eiffel Tower
 const hash = encode(48.8584, 2.2945, 6);  // "u09tun"
@@ -148,7 +148,7 @@ distance("u09tun", "dr5r7"); // ~5840 km
 ### Proximity search (ride-sharing, restaurants)
 
 ```typescript
-import { encode, expand } from "geohashkit";
+import { encode, expand } from "@billdaddy/geohashkit";
 
 const PRECISION = 7; // ~150m cells
 
@@ -177,7 +177,7 @@ nearbyDrivers(48.8584, 2.2945); // → [driver 1]
 ### Spatial clustering by precision
 
 ```typescript
-import { encode, parent } from "geohashkit";
+import { encode, parent } from "@billdaddy/geohashkit";
 
 // Group GPS pings into ~5km × 5km tiles (precision 4)
 const pings = [
@@ -197,7 +197,7 @@ for (const p of pings) {
 ### Bounding box coverage for map tiles
 
 ```typescript
-import { bboxHashes, decodeBbox } from "geohashkit";
+import { bboxHashes, decodeBbox } from "@billdaddy/geohashkit";
 
 // Find all precision-7 cells in a viewport
 const viewport = { minLat: 48.84, minLng: 2.27, maxLat: 48.87, maxLng: 2.32 };
