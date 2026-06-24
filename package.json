@@ -1,0 +1,45 @@
+{
+  "name": "geohashkit",
+  "version": "0.1.0",
+  "description": "Zero-dependency TypeScript geohash: encode/decode lat-lng, neighbors, bounding box, bboxes coverage, expand, distance, parent/children. Port of Python geohash2 / Go geohash.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --forceExit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "geohash", "geo", "latitude", "longitude", "location",
+    "proximity", "spatial", "bounding-box", "neighbors",
+    "ngeohash", "typescript", "zero-dependency"
+  ],
+  "author": "trananhtung",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trananhtung/geohashkit"
+  },
+  "homepage": "https://github.com/trananhtung/geohashkit#readme",
+  "bugs": "https://github.com/trananhtung/geohashkit/issues",
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
